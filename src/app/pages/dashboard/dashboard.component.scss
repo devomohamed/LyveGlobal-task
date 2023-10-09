@@ -1,0 +1,70 @@
+.dashboard{
+  background-color: #fff;
+  padding: 10px;
+  .sales-report{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .buttons{
+      display: flex;
+    }
+  }
+  .report{
+    background: #F5F9FD;
+    border: 1px solid #2F7ED8;
+    border-radius: 10px;
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    .report-title{
+      margin-right: 35px;
+      width: 56.06px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .report-items{
+      width: calc(100% - 91.6px);
+      display: grid;
+      grid-template-columns: repeat(auto-fill,185px);
+      justify-content: center;
+      gap: 1.5rem;
+      // justify-content: space-between;
+      .report-item{
+        .report-item-top{
+          &:not(span){
+            font-weight: bold;
+            font-size: 1rem;
+          }
+          span{
+            color: #5abb26;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+::ng-deep .options {
+  padding: 20px;
+  background-color: rgba(191, 191, 191, 0.15);
+  margin-top: 20px;
+}
+
+::ng-deep .option {
+  margin-top: 10px;
+}
+
+::ng-deep .caption {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+::ng-deep .option > span {
+  margin-right: 10px;
+}
+
+::ng-deep .option > .dx-widget {
+  display: inline-block;
+  vertical-align: middle;
+}

@@ -1,0 +1,169 @@
+<div class="dashboard">
+  <div class="sales-report">
+    <h6>Sales Report</h6>
+    <div class="buttons">
+      <dx-button
+      text="Print" icon="print">
+    </dx-button>
+    <dx-date-range-box [min]="minDate" [max]="maxDate"></dx-date-range-box>
+    </div>
+  </div>
+  <div class="report">
+    <div class="report-title">
+      Today,<br/>
+      16 April
+    </div>
+    <div class="report-items">
+      <div class="report-item">
+        <div class="report-item-top">
+          $22,233.75 &nbsp;
+          <span>-23%</span>
+      </div>
+        <div class="report-item-bottom">
+          revenu
+        </div>
+      </div>
+      <div class="report-item">
+        <div class="report-item-top">
+          $22,233.75 &nbsp;
+          <span>-23%</span>
+      </div>
+        <div class="report-item-bottom">
+          revenu
+        </div>
+      </div>
+      <div class="report-item">
+        <div class="report-item-top">
+          $22,233.75 &nbsp;
+          <span>-23%</span>
+      </div>
+        <div class="report-item-bottom">
+          revenu
+        </div>
+      </div>
+      <div class="report-item">
+        <div class="report-item-top">
+          $22,233.75 &nbsp;
+          <span>-23%</span>
+      </div>
+        <div class="report-item-bottom">
+          revenu
+        </div>
+      </div>
+      <div class="report-item">
+        <div class="report-item-top">
+          $22,233.75 &nbsp;
+          <span>-23%</span>
+      </div>
+        <div class="report-item-bottom">
+          revenu
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="revenu">
+    <div class="revenu-header">
+      <div class="revenu-title">Revenu</div>
+      <dx-button-group
+    [items]="fontStyles"
+    keyExpr="style">
+</dx-button-group>
+    </div>
+    <div class="revenu-chart">
+
+
+
+
+<div id="chart-demo">
+  <dx-chart
+    title="Population: Age Structure (2018)"
+    palette="Harmony Light"
+    [dataSource]="populationData"
+  >
+    <dxi-series valueField="y1564" name="15-64 years"></dxi-series>
+    <dxi-series valueField="y014" name="0-14 years"></dxi-series>
+    <dxi-series valueField="y65" name="65 years and older"></dxi-series>
+    <dxo-common-series-settings
+      #commonSeries
+      argumentField="country"
+      [type]="types[0]"
+    >
+    </dxo-common-series-settings>
+    <dxo-margin [bottom]="20"></dxo-margin>
+    <dxo-argument-axis [valueMarginsEnabled]="false"></dxo-argument-axis>
+    <dxo-export [enabled]="true"></dxo-export>
+    <dxo-legend verticalAlignment="bottom" horizontalAlignment="center">
+    </dxo-legend>
+  </dx-chart>
+  <!-- <div class="options">
+    <div class="caption">Options</div>
+    <div class="option">
+      <span>Series Type</span>
+      <dx-select-box
+        [dataSource]="types"
+        [(value)]="commonSeries.type"
+        [inputAttr]="{ 'aria-label': 'Series Type' }"
+      >
+      </dx-select-box>
+    </div>
+  </div> -->
+</div>
+<dx-chart
+  id="chart"
+  [dataSource]="dataSource"
+  title="Pizza Shop Complaints"
+  palette="Harmony Light"
+>
+  <dxi-value-axis name="frequency" position="left" [tickInterval]="300">
+  </dxi-value-axis>
+  <dxi-value-axis
+    name="percentage"
+    position="right"
+    [showZero]="true"
+    [tickInterval]="20"
+    [valueMarginsEnabled]="false"
+  >
+    <dxo-label [customizeText]="customizeLabelText"></dxo-label>
+    <dxi-constant-line
+      [value]="80"
+      color="#fc3535"
+      dashStyle="dash"
+      [width]="2"
+    >
+      <dxo-label [visible]="false"></dxo-label>
+    </dxi-constant-line>
+  </dxi-value-axis>
+  <dxo-argument-axis>
+    <dxo-label overlappingBehavior="stagger"></dxo-label>
+  </dxo-argument-axis>
+  <dxo-tooltip
+    [enabled]="true"
+    [shared]="true"
+    [customizeTooltip]="customizeTooltip"
+  >
+  </dxo-tooltip>
+  <dxo-common-series-settings argumentField="complaint">
+  </dxo-common-series-settings>
+  <dxi-series
+    type="bar"
+    valueField="count"
+    axis="frequency"
+    name="Complaint frequency"
+    color="#fac29a"
+  >
+  </dxi-series>
+  <dxi-series
+    type="spline"
+    valueField="cumulativePercent"
+    axis="percentage"
+    name="Cumulative percentage"
+    color="#6b71c3"
+  >
+  </dxi-series>
+  <dxo-legend verticalAlignment="top" horizontalAlignment="center">
+  </dxo-legend>
+</dx-chart>
+    </div>
+  </div>
+</div>
+
